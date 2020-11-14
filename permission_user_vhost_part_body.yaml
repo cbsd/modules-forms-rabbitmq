@@ -1,0 +1,4 @@
+  '#permission_user_vhost#':
+    configure_permission: '#permission_configure_permission#'
+    read_permission: '#permission_read_permission#'
+    write_permission: '#permission_write_permission#'

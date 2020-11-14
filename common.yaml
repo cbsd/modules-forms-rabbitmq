@@ -1,0 +1,28 @@
+rabbitmq::repos_ensure: false
+rabbitmq::#package_ensure: '3.8.3-1.el7'
+rabbitmq::package_ensure: present
+rabbitmq::package_name: rabbitmq
+rabbitmq::service_restart: true
+#rabbitmq::service_restart: false
+rabbitmq::#config_ranch: false
+rabbitmq::service_manage: true
+rabbitmq::port: 5672
+rabbitmq::delete_guest_user: true
+rabbitmq::config_cluster: true
+rabbitmq::cluster_nodes: ['%{::fqdn}']
+rabbitmq::cluster_node_type: 'ram'
+rabbitmq::erlang_cookie: 'thisiscooka!'
+rabbitmq::wipe_db_on_cookie_change: true
+rabbitmq::admin_enable: true
+rabbitmq::tcp_recbuf: 196608
+rabbitmq::tcp_sndbuf: 196608
+rabbitmq::tcp_backlog: 128
+rabbitmq::loopback_users: []
+rabbitmq::config_variables:
+  vm_memory_high_watermark: '0.7'
+rabbitmq::config_kernel_variables:
+  inet_dist_listen_min: 19100
+  inet_dist_listen_max: 19105
+rabbitmq::environment_variables:
+  'LC_ALL': en_US.UTF-8
+  'RABBITMQ_USE_LONGNAME': true

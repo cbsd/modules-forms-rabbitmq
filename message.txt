@@ -1,0 +1,7 @@
+
+ this module requires the cbsdpuppet1 jail, create if it doesn't exist
+ via: cbsd jconstruct-tui -> profile -> cbsdpuppet
+
+ please use:
+   cbsd forms module=rabbitmq jname=YOUR_JAIL
+
