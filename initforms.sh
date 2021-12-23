@@ -58,7 +58,7 @@ EOF
 
 ${SQLITE3_CMD} ${FORM_PATH}/${HELPER}.sqlite << EOF
 BEGIN TRANSACTION;
-INSERT INTO system ( helpername, version, packages, have_restart ) VALUES ( "rabbitmq", "201607", "net/rabbitmq", "service rabbitmq restart" );
+INSERT INTO system ( helpername, version, packages, have_restart ) VALUES ( "rabbitmq", "201607", "net/rabbitmq", "rabbitmq" );
 COMMIT;
 EOF
 

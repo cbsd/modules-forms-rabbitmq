@@ -6,6 +6,7 @@ profiles::mq::rabbitmq::globals:
   repos_ensure: false
   package_ensure: present
   package_name: rabbitmq
+  service_ensure: 'running'
   service_restart: true
   service_manage: true
   port: #port#
