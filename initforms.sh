@@ -36,13 +36,15 @@ FORM_PATH="${workdir}/formfile"
 ${SQLITE3_CMD} ${FORM_PATH}/${HELPER}.sqlite << EOF
 BEGIN TRANSACTION;
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,1,"-Globals","Globals",'Globals','PP','',1, "maxlen=60", "delimer", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,2,"port","port",'2','5672','',1, "maxlen=5", "inputbox", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,3,"delete_guest_user","delete_guest_user",'2','true','',1, "maxlen=5", "inputbox", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,4,"config_cluster","config_cluster",'2','true','',1, "maxlen=5", "inputbox", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,4,"cluster_node_type","cluster_node_type",'2','ram','',1, "maxlen=5", "inputbox", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,6,"admin_enable","admin_enable",'2','true','',1, "maxlen=5", "inputbox", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,7,"tcp_recbuf","tcp_recbuf",'2','196608','',1, "maxlen=5", "inputbox", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,8,"tcp_sndbuf","tcp_sndbuf",'2','196608','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,3,"cluster_name","cluster_name",'myclu1','myclu1','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,4,"port","port",'5672','5672','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,4,"management_port","management_port",'15672','15672','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,5,"delete_guest_user","delete_guest_user",'true','true','',1, "maxlen=5", "inputbox", "", "" );
+#INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,6,"config_cluster","config_cluster",'true','true','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,7,"cluster_node_type","cluster_node_type",'2','ram','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,8,"admin_enable","admin_enable",'2','true','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,9,"tcp_recbuf","tcp_recbuf",'2','196608','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,10,"tcp_sndbuf","tcp_sndbuf",'2','196608','',1, "maxlen=5", "inputbox", "", "" );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,200,"-Vhosts","Vhosts",'Vhosts','-','',1, "maxlen=60", "delimer", "", "vhostgroup" );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,201,"vhost","add vhosts",'201','','',0, "maxlen=60", "group_add", "", "vhostgroup" );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,300,"-Users","Users",'Users','-','',1, "maxlen=60", "delimer", "", "usersgroup" );
