@@ -72,8 +72,8 @@ EOF
 # long description
 ${SQLITE3_CMD} ${FORM_PATH}/${HELPER}.sqlite << EOF
 BEGIN TRANSACTION;
-UPDATE system SET longdesc='\
-Erlang implementation of AMQP \
+UPDATE system SET longdesc='\\
+Erlang implementation of AMQP \\
 ';
 COMMIT;
 EOF
