@@ -2,7 +2,7 @@
 profiles::mq::rabbitmq::globals:
   cluster:
     'name': '#cluster_name#'
-    'init_node': '%{::fqdn}'
+    'init_node': '%{networking.fqdn}'
   repos_ensure: false
   package_ensure: present
   package_name: rabbitmq
@@ -21,7 +21,7 @@ profiles::mq::rabbitmq::globals:
     'LC_ALL': en_US.UTF-8
     'RABBITMQ_USE_LONGNAME': true
   config_cluster: true
-  cluster_nodes: ['%{::fqdn}']
+  cluster_nodes: ['%{networking.fqdn}']
   cluster_node_type: 'ram'
   erlang_cookie: 'thisiscooka!'
   wipe_db_on_cookie_change: true
